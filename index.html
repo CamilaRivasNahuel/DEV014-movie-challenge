@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOVIE CHALLENGE</title>
+    <h1> Movie Challenge </h1>
+    <label for="filtroPopular"> Películas: </label>
+    <select select id="filtroPopular" data-testid="select-filter" name="filtroPopular"> 
+      <option value="todas"> Todas las Películas  </option>
+      <option value="populares"> Mejor Calificación</option>
+    </select>
+    <label for="ordenAsc-Desc"> Ordenar: </label>
+    <select select id="ordenAsc-Desc" data-testid="select-orden" name="ordenAsc-Desc">
+      <option value="asc"> A-Z </option>
+      <option value="desc"> Z-A </option>
+    </select>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- <img src="https://image.tmdb.org/t/p/w500/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg"> -->
+    <div id="modalPeliculas" class="modal">
+      <div id="contenido" class="contenidoModal"> 
+         
+      </div> 
+    </div>
+    <script type="module" src="/main.js"></script>
+  
+  </body>
+  <footer> by Camila Rivas | 2024 </footer>
+</html>
