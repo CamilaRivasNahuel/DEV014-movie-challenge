@@ -1,13 +1,14 @@
 import { getDiscoveryMovie, getPopularMovie } from "./data/dataset";
 import { renderItems } from "./view";
-
-let data = await getDiscoveryMovie()
-console.log(data)
-const dataOriginal = [...data ]
-const ul = await renderItems(data)
+let dataOriginal 
+let data 
+getDiscoveryMovie().then(async(res)=>{
+dataOriginal=[...res]
+const ul = await renderItems(res)
 const root = document.getElementById("root");
 root.appendChild(ul);
 
+})
 const selectPopular = document.getElementById('filtroPopular')
 console.log(selectPopular)
 selectPopular.addEventListener("input", async () => {
